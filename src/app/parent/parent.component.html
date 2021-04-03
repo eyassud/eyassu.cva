@@ -1,0 +1,30 @@
+<form [formGroup]="parentForm" (ngSubmit)="onSubmit()">
+
+    <p>
+        <label for="name"> Name </label>
+        <input type="text" id="name" name="name" formControlName="name">
+    </p>
+    
+    <child formControlName="isDerog"></child>
+
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+
+    <p style="margin-top: 100px;">
+        Value: {{ parentForm.get('isDerog').value | json }}<br/>
+    </p>
+    <p>
+        Touched: {{ parentForm.get('isDerog').touched | json }}<br/>
+    </p>
+    <p>
+        Pristine: {{ parentForm.get('isDerog').pristine | json }}<br/>
+    </p>
+    <p>
+        Dirty: {{ parentForm.get('isDerog').dirty | json }}<br/>
+    </p>
+    <p>
+        Valid: {{ parentForm.get('isDerog').valid | json }}<br/>
+    </p>
+</form>
+  

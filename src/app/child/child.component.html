@@ -1,0 +1,10 @@
+<form [formGroup]="childForm">
+    <p>
+        <label for="isDerog">Is Derogatory?</label>
+        <input type="checkbox" id="isDerog" name="isDerog" formControlName="isDerog" (change)="chkBoxChange()"/>
+    </p>
+    <p>
+        <label for="reason">Reason </label>
+        <textarea id="reason" name="reason" formControlName="reason" (change)="txtAreaChange()"></textarea>
+    </p>
+</form>
